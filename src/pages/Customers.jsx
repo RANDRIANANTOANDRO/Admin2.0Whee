@@ -5,7 +5,7 @@ import Table from '../components/table/Table'
 
 
 import customerList from '../assets/JsonData/customers-list.json'
-import UserService from '../'
+import UserService from '../services/UserService'
 
 
 const customerTableHead = [
