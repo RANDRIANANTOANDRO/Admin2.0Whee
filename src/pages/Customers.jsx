@@ -6,6 +6,8 @@ import Table from '../components/table/Table'
 
 import customerList from '../assets/JsonData/customers-list.json'
 import UserService from '../services/UserService'
+import { Link } from "react-router-dom";
+
 
 
 const customerTableHead = [
@@ -23,9 +25,14 @@ const customerTableHead = [
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
+
+const handleDelete = (idEvent) => {
+    // setData(data.filter((item) => item.idEvent !== idEvent));
+  };
+
 const renderBody = (item, index) => (
     <tr key={index}>
-        <td>{item.id}</td>
+        <td>{item.idUser}</td>
         <td>{item.photo}</td>
         <td>{item.nom}</td>
         <td>{item.prenom}</td>
@@ -33,24 +40,47 @@ const renderBody = (item, index) => (
         <td>{item.password}</td>
         <td>{item.contact}</td>
         <td>{item.date_naissance}</td>
-        <td>{item.interests}</td>
-        <td>{item.vehicules}</td>
         <td>{item.evaluation}</td>
+        <td><button style={{backgroundColor:"#fb0b12", fontWeight:600}}>Supprimer</button></td>
     </tr>
 )
+const actionColumn = [
+    {
+      field: "action",
+      headerName: "Action",
+      width: 150,
+      renderCell: (params) => {
+        return (
+          <div className="cellAction">
+            <Link to={'/users/test/'+ '{data.idUsers}'} style={{ textDecoration: "none" }}>
+              <div className="viewButton">Voir Plus</div>
+            </Link>
+            <div
+              className="deleteButton"
+              onClick={() => handleDelete(params.row.idEvent)}
+            >
+              Suprrimer
+            </div>
+          </div>
+        );
+      },
+    },
+  ];
 
 const Customers = () => {
   
 const [users, setUsers] = useState([]);
 
+
+
     
     useEffect(() => {
         const logInterest = async () => {
-          const resp = await InterestService.getInterest();
+          const resp = await UserService.getCompte();
           setUsers(resp.data);
         };
         logInterest();
-      }, []);
+      }, [users, setUsers]);
     return (
         <div>
             <h2 className="page-header">
@@ -64,7 +94,7 @@ const [users, setUsers] = useState([]);
                                 limit='10'
                                 headData={customerTableHead}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={customerList}
+                                bodyData={users.concat(actionColumn)}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>

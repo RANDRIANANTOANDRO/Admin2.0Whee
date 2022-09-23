@@ -41,6 +41,7 @@ const Table = props => {
                                         props.headData.map((item, index) => props.renderHead(item, index))
                                     }
                                 </tr>
+                               
                             </thead>
                         ) : null
                     }
@@ -48,7 +49,7 @@ const Table = props => {
                         props.bodyData && props.renderBody ? (
                             <tbody>
                                 {
-                                    dataShow.map((item, index) => props.renderBody(item, index))
+                                    dataShow.map((item, index) => props.renderBody(item.concat, index))
                                 }
                             </tbody>
                         ) : null
