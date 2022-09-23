@@ -25,14 +25,9 @@ const customerTableHead = [
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
-
-const handleDelete = (idEvent) => {
-    // setData(data.filter((item) => item.idEvent !== idEvent));
-  };
-
 const renderBody = (item, index) => (
     <tr key={index}>
-        <td>{item.idUser}</td>
+        <td>{item.id}</td>
         <td>{item.photo}</td>
         <td>{item.nom}</td>
         <td>{item.prenom}</td>
@@ -41,37 +36,35 @@ const renderBody = (item, index) => (
         <td>{item.contact}</td>
         <td>{item.date_naissance}</td>
         <td>{item.evaluation}</td>
-        <td><button style={{backgroundColor:"#fb0b12", fontWeight:600}}>Supprimer</button></td>
+        <td><button>Supprimer</button></td>
     </tr>
 )
-const actionColumn = [
-    {
-      field: "action",
-      headerName: "Action",
-      width: 150,
-      renderCell: (params) => {
-        return (
-          <div className="cellAction">
-            <Link to={'/users/test/'+ '{data.idUsers}'} style={{ textDecoration: "none" }}>
-              <div className="viewButton">Voir Plus</div>
-            </Link>
-            <div
-              className="deleteButton"
-              onClick={() => handleDelete(params.row.idEvent)}
-            >
-              Suprrimer
-            </div>
-          </div>
-        );
-      },
-    },
-  ];
+// const actionColumn = [
+//     {
+//       field: "action",
+//       headerName: "Action",
+//       width: 150,
+//       renderCell: (params) => {
+//         return (
+//           <div className="cellAction">
+//             <Link to={'/users/test/'+ '{data.idUsers}'} style={{ textDecoration: "none" }}>
+//               <div className="viewButton">Voir Plus</div>
+//             </Link>
+//             <div
+//               className="deleteButton"
+//               onClick={() => handleDelete(params.row.idEvent)}
+//             >
+//               Delete
+//             </div>
+//           </div>
+//         );
+//       },
+//     },
+//   ];
 
 const Customers = () => {
   
 const [users, setUsers] = useState([]);
-
-
 
     
     useEffect(() => {
