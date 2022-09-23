@@ -40,6 +40,7 @@ const Table = props => {
                                     {
                                         props.headData.map((item, index) => props.renderHead(item, index))
                                     }
+
                                 </tr>
                                
                             </thead>
@@ -48,9 +49,8 @@ const Table = props => {
                     {
                         props.bodyData && props.renderBody ? (
                             <tbody>
-                                {
-                                    dataShow.map((item, index) => props.renderBody(item.concat, index))
-                                }
+                                   <img src={props.bodyData.photo} />
+
                             </tbody>
                         ) : null
                     }

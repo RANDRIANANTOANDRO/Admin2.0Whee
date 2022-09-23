@@ -12,31 +12,29 @@ import { Link } from "react-router-dom";
 
 const customerTableHead = [
     'id',
-    '',
+    'img',
     'Nom',
     'Prenom',
     'Mail',
     'Genre',
     'Contact',
     'Adresse',
-    'Centre d \'intérets',
-    'Evaluation'
+    'Action'
 ]
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
 const renderBody = (item, index) => (
     <tr key={index}>
-        <td>{item.id}</td>
-        <td>{item.photo}</td>
+        <td>{item.idUser}</td>
+        <td><img src={item.photo}/></td>
         <td>{item.nom}</td>
         <td>{item.prenom}</td>
         <td>{item.email}</td>
         <td>{item.password}</td>
         <td>{item.contact}</td>
         <td>{item.date_naissance}</td>
-        <td>{item.evaluation}</td>
-        <td><button>Supprimer</button></td>
+        <td><button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>  Supprimer</button><button className="editButton"><i class="fa-solid fa-pen-to-square"></i>  Modifier</button></td>
     </tr>
 )
 // const actionColumn = [
@@ -87,7 +85,7 @@ const [users, setUsers] = useState([]);
                                 limit='10'
                                 headData={customerTableHead}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={users.concat(actionColumn)}
+                                bodyData={users}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>
