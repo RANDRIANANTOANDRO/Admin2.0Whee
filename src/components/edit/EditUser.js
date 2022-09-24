@@ -1,14 +1,16 @@
-import "./single.scss";
+import "./single.css";
 import Topnav from "../topnav/TopNav";
 import Sidebar from "../sidebar/Sidebar";
+import 
 
 
 const EditUser = () => {
+    
   return (
     <div className="single">
-      <Sidebar />
+      
       <div className="singleContainer">
-        <Topnav/>
+        
         <div className="top">
           <div className="left">
             <div className="editButton">Edit</div>
@@ -20,23 +22,27 @@ const EditUser = () => {
                 className="itemImg"
               />
               <div className="details">
-                <h1 className="itemTitle">Jane Doe</h1>
+                <h1 className="itemTitle">Fanjava RANDRIANATOANDRO</h1>
                 <div className="detailItem">
                   <span className="itemKey">Email:</span>
                   <span className="itemValue">janedoe@gmail.com</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Phone:</span>
+                  <span className="itemKey">Contact:</span>
                   <span className="itemValue">+1 2345 67 89</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Addresse:</span>
+                  <span className="itemKey">Adresse:</span>
                   <span className="itemValue">
-                    Elton St. 234 Garden Yd. NewYork
+                  Lot 100-I Bis Ambohinambo TALATAMATY
                   </span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Country:</span>
+                  <span className="itemKey">Genre:</span>
+                  <span className="itemValue">Homme</span>
+                </div>
+                <div className="detailItem">
+                  <span className="itemKey">Evaluation:</span>
                   <span className="itemValue">USA</span>
                 </div>
               </div>
@@ -47,7 +53,7 @@ const EditUser = () => {
           </div>
         </div>
         <div className="bottom">
-        <h1 className="title">Last Transactions</h1>
+        <h1 className="title">Vos Centres d'intérêts</h1>
           {/* <List/> */}
         </div>
       </div>
