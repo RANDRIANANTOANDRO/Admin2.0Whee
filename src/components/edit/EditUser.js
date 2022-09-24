@@ -3,7 +3,7 @@ import Topnav from "../topnav/TopNav";
 import Sidebar from "../sidebar/Sidebar";
 
 
-const Single = () => {
+const EditUser = () => {
   return (
     <div className="single">
       <Sidebar />
@@ -30,7 +30,7 @@ const Single = () => {
                   <span className="itemValue">+1 2345 67 89</span>
                 </div>
                 <div className="detailItem">
-                  <span className="itemKey">Address:</span>
+                  <span className="itemKey">Addresse:</span>
                   <span className="itemValue">
                     Elton St. 234 Garden Yd. NewYork
                   </span>
@@ -55,4 +55,4 @@ const Single = () => {
   );
 };
 
-export default Single;
+export default EditUser;
