@@ -27,14 +27,20 @@ const renderHead = (item, index) => <th key={index}>{item}</th>
 const renderBody = (item, index) => (
     <tr key={index}>
         <td>{item.idUser}</td>
-        <td><img src={item.photo}/></td>
+        <td><img src={"images/blog_2.jpg"} className="tableImage" /></td>
         <td>{item.nom}</td>
         <td>{item.prenom}</td>
-        <td>{item.email}</td>
+        <td>{item.mail}</td>
         <td>{item.password}</td>
         <td>{item.contact}</td>
         <td>{item.date_naissance}</td>
-        <td><button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>  Supprimer</button><button className="editButton"><i class="fa-solid fa-pen-to-square"></i>  Modifier</button></td>
+        <td>
+            <button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>Supprimer</button>
+            <Link to={'/edit/'}>
+            <button className="editButton"><i class="fa-solid fa-pen-to-square"></i>  Modifier</button>
+            </Link>
+
+        </td>
     </tr>
 )
 // const actionColumn = [

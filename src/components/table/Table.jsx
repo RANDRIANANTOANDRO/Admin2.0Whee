@@ -3,12 +3,12 @@ import React, {useState} from 'react'
 import './table.css'
 
 const Table = props => {
-
-    const initDataShow = props.limit && props.bodyData ? props.bodyData.slice(0, Number(props.limit)) : props.bodyData
+    // props.limit && props.bodyData ? props.bodyData.slice(0, Number(props.limit)) :
+    const initDataShow = props.bodyData
 
     const [dataShow, setDataShow] = useState(initDataShow)
 
-    let pages = 1
+    let pages = 0
 
     let range = []
 
@@ -40,7 +40,6 @@ const Table = props => {
                                     {
                                         props.headData.map((item, index) => props.renderHead(item, index))
                                     }
-
                                 </tr>
                                
                             </thead>
@@ -49,8 +48,9 @@ const Table = props => {
                     {
                         props.bodyData && props.renderBody ? (
                             <tbody>
-                                   <img src={props.bodyData.photo} />
-
+                                {
+                                    dataShow.map((item, index) => props.renderBody(item, index))
+                                }
                             </tbody>
                         ) : null
                     }
