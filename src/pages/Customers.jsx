@@ -7,6 +7,7 @@ import Table from '../components/table/Table'
 import customerList from '../assets/JsonData/customers-list.json'
 import UserService from '../services/UserService'
 import { Link } from "react-router-dom";
+import YerOrNo from './YerOrNo';
 
 
 
@@ -25,6 +26,7 @@ const customerTableHead = [
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
 const renderBody = (item, index) => (
+    
     <tr key={index}>
         <td>{item.idUser}</td>
         <td><img src={"images/blog_2.jpg"} className="tableImage" /></td>
