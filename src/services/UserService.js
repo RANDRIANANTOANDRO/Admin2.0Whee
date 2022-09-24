@@ -7,6 +7,9 @@ class UserService {
     newCompte(event) {
         return axios.post(EVENT_API_BASE_URL, event);
     }
+    getUserById(id){
+        return axios.get("http://localhost:8090/api/whee/findUserById/"+id);
+    }
 
     getEventById(eventId) {
         return axios.get(EVENT_API_BASE_URL + '/' + eventId);
