@@ -21,7 +21,7 @@
     },
     {
         "display_name": "Statistiques",
-        "route": "/analytics",
+        "route": "/userProfile",
         "icon": "bx bx-bar-chart-alt"
     },
    
