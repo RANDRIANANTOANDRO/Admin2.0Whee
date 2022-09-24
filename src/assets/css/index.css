@@ -175,6 +175,7 @@ button {
     margin-left: 20px;
     background-image: linear-gradient( to right, var(--main-color), var(--second-color) );
     border-radius: 7px;
+    font-family: 'Roboto', sans-serif;
 
 
 }

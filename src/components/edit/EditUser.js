@@ -1,10 +1,46 @@
 import "./single.css";
-import Topnav from "../topnav/TopNav";
-import Sidebar from "../sidebar/Sidebar";
-import 
+import React, {useState, useEffect} from 'react'
+import {Link, useNavigate, useParams } from 'react-router-dom';
+import UserService from "../../services/UserService";
 
 
 const EditUser = () => {
+    // "idUser": 65,
+    // "nom": "andraibmaol",
+    // "prenom": "Joel",
+    // "mail": "a.",
+    // "password": "1235",
+    // "genre": "homme",
+    // "adresse": "Madagascar",
+    // "contact": "122558",
+    // "photo": "jol.jpg",
+    // "date_naissance": "21-03-1999",
+    // "interests": []
+
+    const {idUser} = useParams();
+    const [nom, setNom] = useState('');
+    const [prenom, setPrenom] = useState('');
+    const [genre, setGenre] = useState('');
+    const [mail, setMail] = useState('');
+    const [adress, SetAdresse] = useState('');
+    const [contact, setContact] = useState('');
+    const [date_naissance, setDateNaissance] = useState('');
+
+
+
+
+
+
+
+
+    useEffect(() => {
+        UserService.getCompte(idUser).then((response) =>{
+            setNom(response.data.nom);
+        });
+
+
+
+    }, [setNom, nom])
     
   return (
     <div className="single">
@@ -13,7 +49,7 @@ const EditUser = () => {
         
         <div className="top">
           <div className="left">
-            <div className="editButton">Edit</div>
+            <div className="editButton">Modifier</div>
             <h1 className="title">Information</h1>
             <div className="item">
               <img
@@ -22,7 +58,7 @@ const EditUser = () => {
                 className="itemImg"
               />
               <div className="details">
-                <h1 className="itemTitle">Fanjava RANDRIANATOANDRO</h1>
+                <h1 className="itemTitle">{prenom} {nom}</h1>
                 <div className="detailItem">
                   <span className="itemKey">Email:</span>
                   <span className="itemValue">janedoe@gmail.com</span>
