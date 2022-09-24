@@ -37,7 +37,7 @@ const renderBody = (item, index) => (
         <td>{item.contact}</td>
         <td>{item.date_naissance}</td>
         <td>
-            <button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>Supprimer</button>
+            <button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>Bloquer</button>
            
             <Link to={`/edit/${item.idUser}`}>
             <button className="editButton"><i class="fa-solid fa-pen-to-square"></i>  Modifier</button>

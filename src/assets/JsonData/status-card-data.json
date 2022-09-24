@@ -2,21 +2,21 @@
     {
         "icon": "bx bx-shopping-bag",
         "count": "1,995",
-        "title": "Total sales"
+        "title": "Nombre de Covoitureurs"
     },
     {
         "icon": "bx bx-cart",
-        "count": "2,001",
-        "title": "Daily visits"
+        "count": "12.4",
+        "title": "Visites Quotidiennes"
     },
     {
         "icon": "bx bx-dollar-circle",
-        "count": "$2,632",
-        "title": "Total income"
+        "count": "$45710",
+        "title": "Somme générée"
     },
     {
         "icon": "bx bx-receipt",
-        "count": "1,711",
-        "title": "Total orders"
+        "count": "47",
+        "title": "Covoiturages Mensuelles"
     }
 ]

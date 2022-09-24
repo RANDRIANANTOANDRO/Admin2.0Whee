@@ -16,11 +16,11 @@ import statusCards from '../assets/JsonData/status-card-data.json'
 
 const chartOptions = {
     series: [{
-        name: 'Online Customers',
-        data: [40,70,20,90,36,80,30,91,60]
+        name: 'Covoitureurs',
+        data: [12,23,20,40,45,47,43,60,75]
     }, {
-        name: 'Store Customers',
-        data: [40, 30, 70, 80, 40, 16, 40, 20, 51, 10]
+        name: 'Conducteur de Véhicules',
+        data: [11, 15, 17, 20, 25, 30, 35, 40, 50, 55]
     }],
     options: {
         color: ['#6ab04c', '#2980b9'],
@@ -34,7 +34,7 @@ const chartOptions = {
             curve: 'smooth'
         },
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+            categories: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep']
         },
         legend: {
             position: 'top'
@@ -47,9 +47,9 @@ const chartOptions = {
 
 const topCustomers = {
     head: [
-        'user',
-        'total orders',
-        'total spending'
+        'Utilisateur',
+        'Nombre de Covoiturage',
+        'Evaluation'
     ],
     body: [
         {
@@ -60,7 +60,7 @@ const topCustomers = {
         {
             "username": "frank iva",
             "order": "250",
-            "price": "$12,251"
+            
         },
         {
             "username": "anthony baker",
@@ -94,11 +94,11 @@ const renderCusomerBody = (item, index) => (
 
 const latestOrders = {
     header: [
-        "order id",
-        "user",
-        "total price",
-        "date",
-        "status"
+        "Id",
+        "Nom",
+        "Date D'inscription",
+        "Heure",
+        "Statut "
     ],
     body: [
         {
@@ -140,10 +140,10 @@ const latestOrders = {
 }
 
 const orderStatus = {
-    "shipping": "primary",
-    "pending": "warning",
-    "paid": "success",
-    "refund": "danger"
+    "Suspendu": "danger",
+    "Validé": "success",
+    "Validé": "success",
+    "Validé": "danger"
 }
 
 const renderOrderHead = (item, index) => (
@@ -205,7 +205,7 @@ const Dashboard = () => {
                 <div className="col-4">
                     <div className="card">
                         <div className="card__header">
-                            <h3>top customers</h3>
+                            <h3>Meilleurs covoitureurs</h3>
                         </div>
                         <div className="card__body">
                             <Table
@@ -216,14 +216,14 @@ const Dashboard = () => {
                             />
                         </div>
                         <div className="card__footer">
-                            <Link to='/'>view all</Link>
+                            <Link to='/'>Voir Tout</Link>
                         </div>
                     </div>
                 </div>
                 <div className="col-8">
                     <div className="card">
                         <div className="card__header">
-                            <h3>latest orders</h3>
+                            <h3>Dernière  </h3>
                         </div>
                         <div className="card__body">
                             <Table
@@ -234,7 +234,7 @@ const Dashboard = () => {
                             />
                         </div>
                         <div className="card__footer">
-                            <Link to='/'>view all</Link>
+                            <Link to='/'>Voir Tout</Link>
                         </div>
                     </div>
                 </div>
