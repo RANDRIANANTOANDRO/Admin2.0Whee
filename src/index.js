@@ -16,7 +16,7 @@ import './assets/css/index.css'
 import Layout from './components/layout/Layout'
 
 const store = createStore(
-  // rootReducer
+  rootReducer
 )
 
 document.title = 'Tua CRM'
