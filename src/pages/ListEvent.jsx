@@ -1,6 +1,9 @@
 import React from 'react'
+import EventService from '../services/EventService'
 
 const ListEvent = () => {
+    
+    
     return (
         <div class="event-schedule-area-two bg-color pad100">
     <div class="container">
