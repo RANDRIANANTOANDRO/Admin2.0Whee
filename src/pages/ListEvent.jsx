@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Products = () => {
+const ListEvent = () => {
     return (
         <div class="event-schedule-area-two bg-color pad100">
     <div class="container">
@@ -722,4 +722,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default ListEvent

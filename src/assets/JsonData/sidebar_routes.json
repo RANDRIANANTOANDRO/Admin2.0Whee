@@ -20,14 +20,14 @@
         "icon": "bx bx-cart"
     },
     {
-        "display_name": "Statistiques",
+        "display_name": "Ajouter Evenement",
         "route": "/userProfile",
         "icon": "bx bx-bar-chart-alt"
     },
    
     {
-        "display_name": "settings",
-        "route": "/settings",
+        "display_name": "Liste Evenements",
+        "route": "/products",
         "icon": "bx bx-cog"
     }
 ]
