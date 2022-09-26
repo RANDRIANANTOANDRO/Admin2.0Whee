@@ -55,7 +55,7 @@ const topCustomers = {
         {
             "username": "john doe",
             "order": "490",
-            "price": "$15,870"
+            "price": "Ar 15,870"
         },
         {
             "username": "frank iva",
@@ -65,17 +65,17 @@ const topCustomers = {
         {
             "username": "anthony baker",
             "order": "120",
-            "price": "$10,840"
+            "price": "Ar 10,840"
         },
         {
             "username": "frank iva",
             "order": "110",
-            "price": "$9,251"
+            "price": "Ar 9,251"
         },
         {
             "username": "anthony baker",
             "order": "80",
-            "price": "$8,840"
+            "price": "Ar 8,840"
         }
     ]
 }
