@@ -29,7 +29,7 @@ const renderBody = (item, index) => (
     
     <tr key={index}>
         <td>{item.idUser}</td>
-        <td><img src={"images/blog_2.jpg"} className="tableImage" /></td>
+        <td><img src={item.photo} className="tableImage" /></td>
         <td>{item.nom}</td>
         <td>{item.prenom}</td>
         <td>{item.mail}</td>

@@ -24,7 +24,7 @@ const Table = props => {
         const start = Number(props.limit) * page
         const end = start + Number(props.limit)
 
-        setDataShow(props.bodyData.slice(start, end))
+        setDataShow(props.bodyData)
 
         setCurrPage(page)
     }

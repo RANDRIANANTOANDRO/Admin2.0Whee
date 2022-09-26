@@ -159,7 +159,7 @@ button {
     height: 35px;
     outline: 0;
     width: auto;
-    color: White;
+   
     padding:4px 10px; 
     font-size:15px;
 
@@ -168,6 +168,7 @@ button {
     background-color:#e12;
     margin-left: 20px;
     border-radius: 7px;
+    color: White;
 
 
 }
@@ -176,8 +177,7 @@ button {
     background-image: linear-gradient( to right, var(--main-color), var(--second-color) );
     border-radius: 7px;
     font-family: 'Roboto', sans-serif;
-
-
+    color: White;
 }
 #trashIcon{
     margin-right: 4px;

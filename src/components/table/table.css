@@ -66,3 +66,9 @@ tbody > tr:hover {
     height: 60px;
     border-radius: 50%;
 }
+
+
+.eventImage{
+    width: 270px;
+    height: 340px;
+}

@@ -19,7 +19,7 @@ const chartOptions = {
         name: 'Covoitureurs',
         data: [12,23,20,40,45,47,43,60,75]
     }, {
-        name: 'Conducteur de Véhicules',
+        name: 'Conducteurs de Véhicules',
         data: [11, 15, 17, 20, 25, 30, 35, 40, 50, 55]
     }],
     options: {

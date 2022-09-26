@@ -50,7 +50,7 @@ const Topnav = () => {
     return (
         <div className='topnav'>
             <div className="topnav__search">
-                <input type="text" placeholder='Search here...' />
+                <input type="text" placeholder='Rechercher ici...' />
                 <i className='bx bx-search'></i>
             </div>
             <div className="topnav__right">
