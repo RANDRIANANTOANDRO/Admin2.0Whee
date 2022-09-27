@@ -1,8 +1,8 @@
 [
     {
         "icon": "bx bx-shopping-bag",
-        "count": "1,995",
-        "title": "Nombre de Covoitureurs"
+        "count": "89",
+        "title": "Covoitureurs"
     },
     {
         "icon": "bx bx-cart",
@@ -17,6 +17,6 @@
     {
         "icon": "bx bx-receipt",
         "count": "47",
-        "title": "Covoiturages Mensuelles"
+        "title": "Covoiturages Mensuels"
     }
 ]
