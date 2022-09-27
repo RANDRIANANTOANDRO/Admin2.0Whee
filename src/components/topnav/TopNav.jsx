@@ -15,7 +15,7 @@ import user_image from '../../assets/images/tuat.png'
 import user_menu from '../../assets/JsonData/user_menus.json'
 
 const curr_user = {
-    display_name: 'Tuat Tran',
+    display_name: 'Fanjava RANDRIANATOANDRO',
     image: user_image
 }
 
@@ -50,7 +50,7 @@ const Topnav = () => {
     return (
         <div className='topnav'>
             <div className="topnav__search">
-                <input type="text" placeholder='Search here...' />
+                <input type="text" placeholder='Rechercher ici...' />
                 <i className='bx bx-search'></i>
             </div>
             <div className="topnav__right">

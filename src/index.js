@@ -14,12 +14,13 @@ import './assets/css/theme.css'
 import './assets/css/index.css'
 
 import Layout from './components/layout/Layout'
+import YerOrNo from './pages/YerOrNo';
 
 const store = createStore(
   rootReducer
 )
 
-document.title = 'Tua CRM'
+document.title = 'Whee Admin'
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,38 +1,90 @@
-import React from 'react'
+import React , { Component, useState, useEffect } from 'react'
 
 import Table from '../components/table/Table'
 
+
+
 import customerList from '../assets/JsonData/customers-list.json'
+import UserService from '../services/UserService'
+import { Link } from "react-router-dom";
+import YerOrNo from './YerOrNo';
+
+
 
 const customerTableHead = [
-    '',
-    'name',
-    'email',
-    'phone',
-    'total orders',
-    'total spend',
-    'location'
+    'id',
+    'img',
+    'Nom',
+    'Prenom',
+    'Mail',
+    'Genre',
+    'Contact',
+    'Adresse',
+    'Action'
 ]
 
 const renderHead = (item, index) => <th key={index}>{item}</th>
 
 const renderBody = (item, index) => (
+    
     <tr key={index}>
-        <td>{item.id}</td>
-        <td>{item.name}</td>
-        <td>{item.email}</td>
-        <td>{item.phone}</td>
-        <td>{item.total_orders}</td>
-        <td>{item.total_spend}</td>
-        <td>{item.location}</td>
+        <td>{item.idUser}</td>
+        <td><img src={item.photo} className="tableImage" /></td>
+        <td>{item.nom}</td>
+        <td>{item.prenom}</td>
+        <td>{item.mail}</td>
+        <td>{item.password}</td>
+        <td>{item.contact}</td>
+        <td>{item.date_naissance}</td>
+        <td>
+            <button className="deleteButton"><i class="fa fa-trash" aria-hidden="true" id="trashIcon"></i>Bloquer</button>
+           
+            <Link to={`/edit/${item.idUser}`}>
+            <button className="editButton"><i class="fa-solid fa-pen-to-square"></i>  Modifier</button>
+            </Link>
+
+        </td>
     </tr>
 )
+// const actionColumn = [
+//     {
+//       field: "action",
+//       headerName: "Action",
+//       width: 150,
+//       renderCell: (params) => {
+//         return (
+//           <div className="cellAction">
+//             <Link to={'/users/test/'+ '{data.idUsers}'} style={{ textDecoration: "none" }}>
+//               <div className="viewButton">Voir Plus</div>
+//             </Link>
+//             <div
+//               className="deleteButton"
+//               onClick={() => handleDelete(params.row.idEvent)}
+//             >
+//               Delete
+//             </div>
+//           </div>
+//         );
+//       },
+//     },
+//   ];
 
 const Customers = () => {
+  
+const [users, setUsers] = useState([]);
+
+    
+    useEffect(() => {
+        const logInterest = async () => {
+          const resp = await UserService.getCompte();
+          setUsers(resp.data);
+        };
+        logInterest();
+      }, [users, setUsers]);
     return (
         <div>
             <h2 className="page-header">
-                customers
+                Utilisateurs
             </h2>
             <div className="row">
                 <div className="col-12">
@@ -42,7 +94,7 @@ const Customers = () => {
                                 limit='10'
                                 headData={customerTableHead}
                                 renderHead={(item, index) => renderHead(item, index)}
-                                bodyData={customerList}
+                                bodyData={users}
                                 renderBody={(item, index) => renderBody(item, index)}
                             />
                         </div>

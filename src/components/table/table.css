@@ -60,3 +60,15 @@ tbody > tr:hover {
     color: var(--txt-white);
     background-color: var(--second-color);
 }
+
+.tableImage{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+.eventImage{
+    width: 270px;
+    height: 340px;
+}
